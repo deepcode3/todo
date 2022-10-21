@@ -1,0 +1,67 @@
+/* AddtodoComponent */
+.AddTodo{
+   height: 100px;
+   width: max-content;
+   margin-left: auto;
+   margin-right: auto;
+   display: flex;
+   align-items: center;
+}
+.Todoform{
+    border: 2px solid rgb(144, 140, 140);
+    background-color: inherit;
+    border-radius: 25px;
+    background-color: rgb(244, 247, 234);
+}
+.Addbutton{
+    background-color: rgb(184, 202, 227);
+    border: none;
+    border-radius: 5px;
+    margin: 0 5px;
+}
+.link{
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 20px;
+    padding-top: 100px;
+}
+
+/* TodoComponent */
+.Todocontainer{
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.todos{
+    height: 300px;
+    overflow-y: scroll;
+}
+.Todolist{
+    position: relative;
+   list-style: none;
+   height: 40px;
+   display: flex;
+   align-items: center;   
+   font-style:oblique;
+   font-weight: 600;
+   font-size: 17px;
+   line-height: 17px;
+   margin: 10px 0px;
+}
+.checkbox{
+    position: absolute;
+    right: 80px; 
+}
+.deletelist{
+    position: absolute;
+    right: 0px;
+    color: white;
+    background-color: rgb(146, 123, 216);
+}
+.clearlist{
+   
+    color: white;
+    background-color: rgb(216, 123, 193);
+}
