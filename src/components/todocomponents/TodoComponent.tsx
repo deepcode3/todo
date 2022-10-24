@@ -33,13 +33,19 @@ const TodoComponent: React.FC<{
                                 }}
                                 className="Todolist"
                             >
-                                <span
-                                    style={{
-                                        textDecoration: todo.completed ? "line-through" : "none",
-                                    }}
-                                >
-                                    {todo.title}
-                                </span>
+                                <div className="todoText">
+                                    <span
+                                        style={{
+                                            textDecoration: todo.completed
+                                                ? "line-through"
+                                                : "none",
+                                        }}
+                                        className="title"
+                                    >
+                                        {todo.title}
+                                    </span>
+                                    <span style={{ lineHeight: "10px" }}> {todo.description}</span>
+                                </div>
                                 <input
                                     className="checkbox"
                                     type="checkbox"
@@ -67,7 +73,7 @@ const TodoComponent: React.FC<{
                     </ul>
                 </div>
             ) : (
-                <div className="Todolist">No Todo has been created</div>
+                <div className="todos">No Todo has been created</div>
             )}
         </div>
     );

@@ -4,9 +4,12 @@ import TodoComponent from "./todocomponents/TodoComponent";
 
 const TodoPage = () => {
     const [todos, setTodos] = useState<any>({ todos: [] });
-    const addTodos = (title: string) => {
+    const addTodos = (title: string, description: string) => {
         setTodos({
-            todos: [{ title, completed: false, id: todos.todos.length + 1 }, ...todos.todos],
+            todos: [
+                ...todos.todos,
+                { title, description, completed: false, id: todos.todos.length + 1 },
+            ], //rest operators is used
         });
     };
     const deleteTodos = (id: number) => {
