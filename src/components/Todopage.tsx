@@ -1,9 +1,21 @@
 import { useState } from "react";
+import "./styles.css";
 import AddtodoComponent from "./todocomponents/AddtodoComponent";
 import TodoComponent from "./todocomponents/TodoComponent";
 
+type ITodo = {
+    id: number;
+    title: string;
+    description: string;
+    completed: boolean;
+};
+
+type ITodos = {
+    todos: ITodo[]; //  Todos is an array of Todo
+};
+
 const TodoPage = () => {
-    const [todos, setTodos] = useState<any>({ todos: [] });
+    const [todos, setTodos] = useState<ITodos>({ todos: [] });
     const addTodos = (title: string, description: string) => {
         setTodos({
             todos: [
@@ -14,7 +26,7 @@ const TodoPage = () => {
     };
     const deleteTodos = (id: number) => {
         setTodos({
-            todos: todos.todos.filter((t: any) => t.id !== id),
+            todos: todos.todos.filter((t: ITodo) => t.id !== id),
         });
     };
     const clearTodos = () => {
@@ -24,21 +36,24 @@ const TodoPage = () => {
     };
     const toggleTodos = (id: number) => {
         setTodos({
-            todos: todos.todos.map((todo: any) =>
-                todo.id === id ? { ...todo, completed: !todo.completed } : todo
+            todos: todos.todos.map((t: ITodo) =>
+                t.id === id ? { ...t, completed: !t.completed } : t
             ),
         });
     };
     return (
-        <div>
-            <AddtodoComponent add={addTodos} />
-            <hr />
-            <TodoComponent
-                todos={todos}
-                toggleTodos={toggleTodos}
-                deleteTodos={deleteTodos}
-                clearTodos={clearTodos}
-            />
+        <div className="Container">
+            <div className="Card">
+                <h2 className="title">TODO'S</h2>
+                <AddtodoComponent add={addTodos} />
+
+                <TodoComponent
+                    todos={todos}
+                    toggleTodos={toggleTodos}
+                    deleteTodos={deleteTodos}
+                    clearTodos={clearTodos}
+                />
+            </div>
         </div>
     );
 };

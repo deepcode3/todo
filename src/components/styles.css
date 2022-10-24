@@ -1,0 +1,25 @@
+.Container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(138.33deg, #30af49 0%, #711124 100%);
+
+}
+.Card{
+    background-color: rgb(252, 252, 251);
+    width: 620px;
+    height: 700px;
+    border-radius: 8px;
+    box-shadow: 0 2px 24px 0 rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+.title{
+    width: 100%;
+    padding: 15px 0px;
+    text-align: center;
+
+}

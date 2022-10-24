@@ -1,11 +1,12 @@
 import { useState, MouseEvent } from "react";
 import { Link } from "react-router-dom";
+import Button from "./button";
 import "./todo.css";
 
 const AddtodoComponent = ({ add }: { add: (text: string, text2: string) => void }) => {
     const [todo, setTodo] = useState<string>("");
     const [tododescription, setTodoDescription] = useState<string>("");
-    const submit = (e: MouseEvent) => {
+    const submit = (e: MouseEvent<HTMLButtonElement>) => {
         e.preventDefault();
         if (!todo) {
             alert("please enter a todo");
@@ -35,13 +36,15 @@ const AddtodoComponent = ({ add }: { add: (text: string, text2: string) => void 
                     }}
                     placeholder="description"
                 />
-                <button className="Addbutton" onClick={submit}>
-                    Add
-                </button>
+                <Button className="Addbutton" onClick={submit}>
+                    <span>Add</span>
+                </Button>
             </form>
-            <Link className="link" to="/next">
-                next page
-            </Link>
+            <Button className={"Nextlist"}>
+                <Link className="link" to="/next">
+                    Next
+                </Link>
+            </Button>
         </div>
     );
 };

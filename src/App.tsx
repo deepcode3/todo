@@ -5,7 +5,7 @@ import Nextpage from "./components/Nextpage";
 
 function App() {
     return (
-        <div className="App">
+        <div>
             <Routes>
                 <Route path="/" element={<TodoPage />} />
                 <Route path="/next" element={<Nextpage />} />
