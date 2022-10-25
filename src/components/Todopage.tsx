@@ -2,17 +2,7 @@ import { useState } from "react";
 import "./styles.css";
 import AddtodoComponent from "./todocomponents/AddtodoComponent";
 import TodoComponent from "./todocomponents/TodoComponent";
-
-type ITodo = {
-    id: number;
-    title: string;
-    description: string;
-    completed: boolean;
-};
-
-type ITodos = {
-    todos: ITodo[]; //  Todos is an array of Todo
-};
+import { ITodo, ITodos } from "../interface";
 
 const TodoPage = () => {
     const [todos, setTodos] = useState<ITodos>({ todos: [] });

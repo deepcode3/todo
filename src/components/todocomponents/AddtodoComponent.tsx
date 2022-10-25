@@ -1,4 +1,4 @@
-import { useState, MouseEvent } from "react";
+import { useState, MouseEvent, ChangeEvent } from "react";
 import { Link } from "react-router-dom";
 import Button from "./button";
 import "./todo.css";
@@ -6,7 +6,8 @@ import "./todo.css";
 const AddtodoComponent = ({ add }: { add: (text: string, text2: string) => void }) => {
     const [todo, setTodo] = useState<string>("");
     const [tododescription, setTodoDescription] = useState<string>("");
-    const submit = (e: MouseEvent<HTMLButtonElement>) => {
+
+    const submit = (e: MouseEvent<HTMLButtonElement>): void => {
         e.preventDefault();
         if (!todo && !tododescription) {
             alert("please enter a todo");

@@ -1,16 +1,6 @@
 import React from "react";
 import Button from "./button";
-
-type ITodo = {
-    id: number;
-    title: string;
-    description: string;
-    completed: boolean;
-};
-
-type ITodos = {
-    todos: ITodo[]; //  Todos is an array of Todo
-};
+import { ITodo, ITodos } from "../../interface";
 
 const TodoComponent: React.FC<{
     todos: ITodos;
