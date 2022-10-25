@@ -8,7 +8,7 @@ const AddtodoComponent = ({ add }: { add: (text: string, text2: string) => void 
     const [tododescription, setTodoDescription] = useState<string>("");
     const submit = (e: MouseEvent<HTMLButtonElement>) => {
         e.preventDefault();
-        if (!todo) {
+        if (!todo && !tododescription) {
             alert("please enter a todo");
         } else {
             add(todo, tododescription);
@@ -37,7 +37,7 @@ const AddtodoComponent = ({ add }: { add: (text: string, text2: string) => void 
                     placeholder="description"
                 />
                 <Button className="Addbutton" onClick={submit}>
-                    <span>Add</span>
+                    Add
                 </Button>
             </form>
             <Button className={"Nextlist"}>
