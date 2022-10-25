@@ -95,6 +95,18 @@
     font-size: 20px;
     letter-spacing: -0.27px;
     line-height: 22px;
+    text-decoration: line-through;
+}
+.crossedheadding{
+    position: absolute;
+    left: 5px;
+    top: 2px;
+    color: #0f0f0f;
+    font-family: "Open Sans";
+    font-size: 20px;
+    letter-spacing: -0.27px;
+    line-height: 22px;
+    text-decoration: none;
 }
 .description{
     position: absolute;

@@ -20,12 +20,7 @@ const TodoComponent: React.FC<{
                 <ul className="todos">
                     {todos.todos.map((t: ITodo) => (
                         <li key={t.id} className="Todolist">
-                            <p
-                                style={{
-                                    textDecoration: t.completed ? "line-through" : "none",
-                                }}
-                                className="headding"
-                            >
+                            <p className={t.completed ? "headding" : "crossedheadding"}>
                                 {t.title}
                             </p>
                             <p className="description"> {t.description}</p>
