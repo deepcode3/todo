@@ -47,7 +47,7 @@ const TodoComponent: React.FC<{
                                 onChange={() => toggleTodos(t.id)}
                             />
                             <Button
-                                className="deletelist"
+                                className={"deleteButton"}
                                 onClick={() => {
                                     deleteTodo(t.id);
                                 }}
@@ -57,7 +57,7 @@ const TodoComponent: React.FC<{
                         </li>
                     ))}
                     <Button
-                        className={"clearlist"}
+                        className={"clearButton"}
                         onClick={() => {
                             clearTodo();
                         }}

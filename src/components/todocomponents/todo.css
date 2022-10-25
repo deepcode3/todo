@@ -34,20 +34,24 @@
     background-color: rgb(64, 45, 206);
     color: white;
 }
-
+.Nextlist{
+    box-sizing: border-box;
+    height: 40px;
+    width:100px;
+    border: 1px solid rgb(216, 123, 193);
+    border-radius: 6px;
+    box-shadow: 0 2px 10px 0 rgba(0,0,0,0.1);  
+    color: rgb(6, 6, 6);
+    text-align: center;
+}
+.Nextlist:hover{
+    background-color: rgb(216, 123, 193);
+    color: white; 
+}
 
 .link{
-    text-decoration: none;
-    font-family: "Open Sans";
-    font-size: 16px;
-    font-weight: 600;
-    letter-spacing: -0.56px;
-    line-height: 22px;
-    text-align: center;
-    color: black;
-}
-.link:hover{
-    color: #FFFFFF;
+    text-decoration:none;
+    color: inherit;
 }
 
 
@@ -108,7 +112,7 @@
     top:20px
     
 }
-.deletelist{
+.deleteButton{
     position: absolute;
     top:10px;
     right: 3px;
@@ -121,12 +125,12 @@
     color: rgb(32, 30, 30);
     text-align: center;
 }
-.deletelist:hover{
+.deleteButton:hover{
     background-color: rgb(216, 123, 193);
     color: white;
 }
 
-.clearlist{
+.clearButton{
     box-sizing: border-box;
     height: 40px;
     width:100px;
@@ -135,8 +139,9 @@
     box-shadow: 0 2px 10px 0 rgba(0,0,0,0.1);  
     color: rgb(13, 14, 14);
     text-align: center;
+    margin: 2px;
 }
-.clearlist:hover{
+.clearButton:hover{
     background-color: rgb(216, 123, 193);
     color: white;
 }
@@ -154,18 +159,5 @@
 }
 
 /* NextPage */
-.Nextlist{
-    box-sizing: border-box;
-    height: 40px;
-    width:100px;
-    border: 1px solid rgb(216, 123, 193);
-    border-radius: 6px;
-    box-shadow: 0 2px 10px 0 rgba(0,0,0,0.1);  
-    color: white;
-    text-align: center;
-}
-.Nextlist:hover{
-    background-color: rgb(216, 123, 193);
-    color: white; 
-}
+
 
